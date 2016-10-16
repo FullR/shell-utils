@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ifconfig | grep -m 1 -oP "(?<=inet addr:)(\d\d?\d?.\d\d?\d?.\d\d?\d?.\d\d?\d?)"
