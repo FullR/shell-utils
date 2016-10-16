@@ -1,0 +1,3 @@
+#!/bin/bash
+
+route | grep -m1 -oP "(?<=default         )(\d\d?\d?.\d\d?\d?.\d\d?\d?.\d\d?\d?)"

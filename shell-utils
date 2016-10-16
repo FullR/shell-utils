@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ls -l $(dirname $(realpath $0)) | grep x 

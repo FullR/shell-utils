@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+  ip=$(./default-gateway)
+else
+  ip=$1
+fi
+
+echo "nmap -sP $ip/24"
+nmap -sP $ip/24
