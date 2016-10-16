@@ -1,6 +1,0 @@
-#!/bin/bash
-
-install_path=$(dirname $(realpath $0))
-
-echo "source $install_path/shell-utils" >> ~/.bashrc
-source ~/.bashrc

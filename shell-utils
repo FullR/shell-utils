@@ -1,7 +1,0 @@
-#!/bin/bash
-
-install_path=$(dirname $(realname $0))
-
-source ./aliases
-
-PATH=$install_path:$PATH
