@@ -1,0 +1,18 @@
+#!/bin/bash
+
+install() {
+  sudo apt-get install postgresql postgresql-contrib -y
+}
+
+setPostgrePassword() {
+  sudo -u postgres psql -c "ALTER USER \"postgres\" WITH PASSWORD '$1'"
+}
+
+if [ $# -eq 1 ]; then
+  echo "Installing PostgreSQL with password"
+  install
+  setPostgrePassword $1
+else
+  echo "Installing PostgreSQL with no password"
+  install
+fi
