@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# about: Installs PostgreSQL. If an argument is passed, it will be used as the password of the postgres user.
+
 install() {
   sudo apt-get install postgresql postgresql-contrib -y
 }

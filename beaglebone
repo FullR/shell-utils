@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# about: Connects to beaglebone. Pass "reset" to clear existing ssh beaglebone key.
+
 if [ $# -eq 1 ]; then
   if [ $1 = "reset" ]; then
     echo "Clearing key"

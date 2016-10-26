@@ -1,3 +1,5 @@
 #!/bin/bash
 
+# about: Prompts the user to configure their timezone settings.
+
 sudo dpkg-reconfigure tzdata

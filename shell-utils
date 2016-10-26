@@ -1,3 +1,19 @@
 #!/bin/bash
 
-ls -l $(dirname $(realpath $0)) | grep x 
+# about: Prints available shell utilities
+
+shell_utils_dir=$(dirname $(realpath $0));
+commands=$shell_utils_dir/*
+
+for f in $commands
+do
+  if [[ -x $f ]]; then
+    usage=$(cat $f | grep -oP "(?<=^#\sabout:\s)(.*)")
+    commandName=$(basename $f)
+    if [[ ! -z $usage ]]; then
+      echo $commandName - $usage
+    else
+      echo $commandName
+    fi
+  fi
+done

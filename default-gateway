@@ -1,3 +1,5 @@
 #!/bin/bash
 
+# about: Prints the default gateway
+
 route | grep -m1 -oP "(?<=default         )(\d\d?\d?.\d\d?\d?.\d\d?\d?.\d\d?\d?)"

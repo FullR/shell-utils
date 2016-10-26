@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# about: Fails if not run with sudo. If an argument is passed it will be printed on failure.
+
 if [ "$(id -u)" != "0" ]; then
   if [ $# -eq 1 ]; then
     echo "$1"

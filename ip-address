@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# about: Prints the local ip address. Pass "external" to get the external ip address.
+
 if [[ $1 == "external" ]]; then
   dig +short myip.opendns.com @resolver1.opendns.com
 else
