@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# about: Prints available shell utilities
+# about: Prints available shell utilities.
 
 shell_utils_dir=$(dirname $(realpath $0));
 commands=$shell_utils_dir/*
