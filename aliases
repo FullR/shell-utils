@@ -3,4 +3,4 @@
 alias zr="[ -f ~/.zshrc ] && source ~/.zshrc || source ~/.bashrc"
 alias zv="[ -f ~/.zshrc ] && vim ~/.zshrc || vim ~/.bashrc"
 alias st="git status"
-alias nr="npm run"
+alias nr="yarn run"

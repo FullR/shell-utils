@@ -2,11 +2,13 @@
 
 # about: Installs NodeJS, NPM, and NVM.
 
-sudo apt-get update
-sudo apt-get install build-essential libssl-dev curl git -y
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm install stable
-node --version
-npm --version
+#sudo apt-get update
+#sudo apt-get install build-essential libssl-dev curl git -y
+#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+#nvm install stable
+
+echo "Node, npm, and nvm installed."
+echo "You must add the global binary directory to your path to use global binaries:"
+echo "$(npm config get prefix)/bin"
