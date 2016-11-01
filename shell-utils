@@ -4,16 +4,17 @@
 
 shell_utils_dir=$(dirname $(realpath $0));
 commands=$shell_utils_dir/*
+commandColor='\033[1;34m' #
+end_color='\033[0m'
 
 for f in $commands
 do
   if [[ -x $f ]]; then
     usage=$(cat $f | grep -oP "(?<=^#\sabout:\s)(.*)")
     commandName=$(basename $f)
-    if [[ ! -z $usage ]]; then
-      echo $commandName - $usage
-    else
-      echo $commandName
+    if [[ -z $usage ]]; then
+      usage="No info"
     fi
+    printf "${commandColor}%-30s${end_color} %s\n" "$commandName" "$usage"
   fi
 done
