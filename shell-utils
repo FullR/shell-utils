@@ -10,7 +10,7 @@ end_color='\033[0m'
 for f in $commands
 do
   if [[ -x $f ]]; then
-    usage=$(cat $f | grep -oP "(?<=^#\sabout:\s)(.*)")
+    usage=$(cat $f | grep -oP "(?<=#\sabout:\s)(.*)")
     commandName=$(basename $f)
     if [[ -z $usage ]]; then
       usage="No info"

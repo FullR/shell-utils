@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+//# about: Search StackOverflow from the command line.
+
 const { exec } = require('child_process');
 const query = encodeURIComponent(process.argv.slice(2).join(' '));
 
