@@ -1,3 +1,5 @@
 #!/usr/bin/env node
+const { exec } = require('child_process');
+const query = encodeURIComponent(process.argv.slice(2).join(' '));
 
-require('child_process').exec(`google-chrome http://stackoverflow.com/search?q=${encodeURIComponent(process.argv.slice(2).join(' '))}`);
+exec(`google-chrome http://stackoverflow.com/search?q=${query}`, (error) => error && console.error(error));
